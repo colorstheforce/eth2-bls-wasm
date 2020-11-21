@@ -2,21 +2,17 @@
   "name": "@chainsafe/eth2-bls-wasm",
   "version": "0.5.0",
   "description": "BLS signature by WebAssembly",
-  "main": "./dist/bls.js",
-  "types": "./dist/bls.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "contributors": [
     "herumi <herumi@nifty.com> (https://github.com/herumi/)",
     "Chainsafe Systems"
   ],
   "files": [
-    "dist"
+    "index*"
   ],
   "scripts": {
-    "prebuild": "rm -f bls-eth-wasm/bls_c.js && rm -f bls-eth-wasm/bls_c.wasm",
-    "build": "cd bls && make clean && make bls-eth-wasm && yarn run build:lib",
-    "prebuild:lib": "rm -rf dist",
-    "build:lib": "babel bls-eth-wasm -d dist --copy-files",
-    "test": "node test.js"
+    "test": "mocha --colors -r ts-node/register 'test/**/*.test.ts'"
   },
   "repository": {
     "type": "git",
@@ -37,11 +33,13 @@
   },
   "homepage": "git@github.com:ChainSafe/eth2-bls-wasm#readme",
   "devDependencies": {
-    "assert": "^2.0.0",
-    "standard": "^10.0.3"
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^14.14.9",
+    "mocha": "^8.2.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
   },
   "dependencies": {
-    "bls-eth-wasm": "^0.4.1",
-    "buffer": "^5.4.3"
+    "bls-eth-wasm": "^0.4.1"
   }
 }
