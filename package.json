@@ -37,14 +37,11 @@
   },
   "homepage": "git@github.com:ChainSafe/eth2-bls-wasm#readme",
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
-    "@chainsafe/babel-plugin-inline-binary-import": "^1.0.3",
     "assert": "^2.0.0",
     "standard": "^10.0.3"
   },
   "dependencies": {
+    "bls-eth-wasm": "^0.4.1",
     "buffer": "^5.4.3"
   }
 }
