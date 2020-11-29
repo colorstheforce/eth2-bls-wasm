@@ -4,6 +4,8 @@
 
 # BLS signature for Node.js and Web by WebAssembly
 
+> Deprecated in favor of https://github.com/herumi/bls-eth-wasm
+
 # Abstract
 
 see [bls](https://github.com/herumi/bls) and [BLS demo on browser](https://herumi.github.io/bls-wasm/bls-demo.html)
